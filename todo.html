@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="todo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+</head>
+<body>
+    <header>My To-Do List!!</header>
+
+    <form>          <!--/*add drop shadow through JS(hint: mouseover element object change); */ -->
+        <input type="text" class="todoInput">
+        <button class="todoButton" type="submit">
+            <i class="fas fa-plus-square"></i>        
+        </button>
+        <div class="select">
+            <select name="todos" class="filterTodo">
+                <option value="all" class="all">All</option>
+                <option value="completed" class="completed">Completed</option>
+                <option value="incomplete" class="incomplete">Incomplete</option>
+            </select>
+        </div>
+    </form>
+    
+
+    <div class="todoContainer">
+        <ul class="todo"></ul>
+    </div>
+
+    <script src="todo.js"></script>
+</body>
+</html>

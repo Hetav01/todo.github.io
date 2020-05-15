@@ -1,0 +1,206 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body
+{
+    font-family: 'Balsamiq Sans', cursive;
+    background-image: linear-gradient(to right, #e2c852, #e39236); /* it always contains two colours */
+    min-height: 100vh;
+    color: whitesmoke;
+}
+
+header
+{
+    text-align: center;
+    font-size: 3rem;
+}
+
+.todoInput
+{
+    font-family: 'Balsamiq Sans', cursive;
+    font-weight: bold;
+}
+
+header, form
+{
+    display: flex;
+    min-height: 20vh;
+    justify-content: center;
+    align-items: center;
+}
+
+form button, form input
+{
+    padding: 10px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+}
+
+form button
+{
+    color: #e39236;
+    cursor: pointer;
+    transition: all 500ms ease;
+}
+
+form button:hover
+{
+    color: black;
+    background: #e9be8e;
+    box-shadow: 1px 1px 1px 1px black;
+    outline: none;
+}
+
+form input
+{
+    transition: all 500ms ease;
+}
+
+form input:hover
+{
+    box-shadow: 1px 1px 1px 1px black;
+}
+
+.todoContainer
+{
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.todo
+{
+    list-style: none;
+    min-width: 35%;
+}
+
+.todoItem
+{
+    background-color: white;
+    margin: 0.5rem;
+    color: black;
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 350ms ease;
+}
+
+.todoItem:hover
+{
+    background: #eca34f;
+    color: white;
+}
+
+.todoItem li
+{
+    flex: 1;
+}
+
+.completedButton
+{
+    background: #34a853;
+    padding: 1em;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 350ms ease;
+}
+
+.completedButton:hover
+{
+    color: white;
+    background: yellowgreen;
+    border: none;
+    text-decoration: line-through white;
+}
+
+.deleteButton
+{
+    background: rgb(216, 64, 64);
+    padding: 1rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    outline: none;
+    transition: all 500ms ease;
+}
+
+.deleteButton:hover
+{
+    border: none;
+    outline: none;
+    background: rgb(255, 0, 0);
+}
+
+.newTodo
+{
+    padding-left: 0.5rem;
+}
+
+.fa-trash, .fa-check
+{
+    pointer-events: none;
+}
+
+.completed
+{
+    text-decoration: line-through black;
+    opacity: 0.6;
+}
+
+.fall
+{
+    transform: translateY(8rem) rotateZ(60deg);
+    opacity: 0;
+}
+
+select      /*this is so that we can remove the pre-included styling fromthe select button.*/
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    outline: none;
+    appearance: none;
+}
+
+.select
+{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden; /*covers any overflow from if the style is bigger than the parent element*/
+}
+
+select
+{
+    color: #eca34f;
+    padding: 10px;
+    text-align: center; 
+    cursor: pointer;
+    width: 8rem;
+} 
+
+.select::after 
+{
+  content: "\25CE";
+  position: absolute;
+  padding: 10px;
+  background: #eca34f;
+  top: 0;
+  right: 0;
+  pointer-events: none;
+  transition: all 500ms ease;
+}
+
+.select:hover::after
+{
+    color: black;
+    background: #e9be8e;
+}
